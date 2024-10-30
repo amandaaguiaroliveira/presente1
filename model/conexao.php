@@ -1,9 +1,4 @@
 <?php
-/**
- * Description of conexão
- *
- * @author 357562
- */
 class conexao {
     public static $instance;
     

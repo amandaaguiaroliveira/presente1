@@ -91,7 +91,7 @@ class lista {
     public function removeItem($lista, $produto){
         try{
             
-            $sql = "delete from item where lista_codigo=$lista and produto_codigo = $produto";
+            $sql = "delete from item where lista_codigo=$lista"."and produto_codigo = $produto";
             $stmt= conexao::getConexao()->prepare($sql);
             
             $stmt->bindValue(1,$lista);

@@ -31,7 +31,8 @@
         //echo $l->addItem('teste@teste.com', 1);
         //echo $l->removeItem(25, 1);
 
-        print_r($l->getItem(25));
+        //print_r($l->getItem(26));
+        print_r($l->getItensUsuario('a@a'));
         
         echo 'aqui';
     

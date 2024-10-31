@@ -116,12 +116,13 @@ class lista {
 
     public function getItem($lista){
         try{
-            $sql = "Select produto.codigo, produto.nome from produto"
-            ."inner join item on item.produto_codigo = produto.codigo"
-            ."where lista.codigo = ?";
+            $sql = "SELECT produto.codigo, produto.nome FROM produto"
+            ."INNER JOIN item ON item.produto_codigo = produto.codigo"
+            ."INNER JOIN lista on lista.codigo = item.lista_codigo"
+            ."WHERE lista.codigo = ?";
 
             $stmt = Conexao::getConexao()->prepare($sql);
-            $stmt->bindValue(1,$lista);
+            $stmt->bindValue(25,$lista);
 
             $stmt->execute();
 

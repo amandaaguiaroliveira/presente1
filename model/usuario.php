@@ -17,12 +17,12 @@ class usuario {
             
             
             
-            return 'Usuario cadastrado com sucesso';
+            return 'Usuário cadastrado com sucesso';
             
-        } catch (Exception $ex) {
+        } catch (PDOException $ex) {
             if($ex->errorInfo[1] == 1062)
             {
-                return 'Usuario já cadastrado';
+                return 'Usuário já cadastrado';
             } else{
                 return 'Erro ao cadastrar Usuário';
             }

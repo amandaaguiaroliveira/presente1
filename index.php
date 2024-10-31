@@ -26,11 +26,14 @@
         $l = new lista();
         //print_r($l->addLista('4b9411a9b28f9063ea75e5fee24bb2a8','lista de presentes'));
         //echo $l->removeLista('teste@teste.com');
-        //echo 'aqui';
+        
         //print_r($l->getLista('teste@teste.com'));
         //echo $l->addItem('teste@teste.com', 1);
-        echo $l->removeItem(25, 1);
+        //echo $l->removeItem(25, 1);
+
+        print_r($l->getItem(25));
         
+        echo 'aqui';
     
         ?>
     </body>

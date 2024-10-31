@@ -1,4 +1,7 @@
 <?php
+
+use LDAP\Result;
+
 class lista {
     public function addLista($email,$descricao){
         try{
@@ -79,7 +82,7 @@ class lista {
             
             return 'Produto adicionado com sucesso';
             
-        } catch (Exception $ex) {
+        } catch (PDOException $ex) {
             if($ex->errorInfo[1]==1062){
                 return 'Produto adicionado a lista';
             }else{
@@ -104,11 +107,42 @@ class lista {
             }else{
                 return 'Nenhum item removido';
             }
-        } catch (Exception $ex) {
+        } catch (PDOException $ex) {
             
             return 'Erro ao excluir';
 
         }
     }
+
+    public function getItem($lista){
+        try{
+            $sql = "Select produto.codigo, produto.nome from produto"
+            ."inner join item on item.produto_codigo = produto.codigo"
+            ."where lista.codigo = ?";
+
+            $stmt = Conexao::getConexao()->prepare($sql);
+            $stmt->bindValue(1,$lista);
+
+            $stmt->execute();
+
+            if($stmt->rowCount()>0){
+                $result = $stmt->fetchAll(PDO::FETCH_BOTH);
+                
+                return $result;
+            }
+                
+            return false;
+
+        } catch (PDOException $ex) {
+            
+            return false;
+
+        }
+    }
+
+    
+
+    }
+
   
-}
+

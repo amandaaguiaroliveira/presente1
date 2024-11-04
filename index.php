@@ -1,41 +1,73 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
+
         <?php
         
         include './model/conexao.php';
         include './model/usuario.php';
         include './model/produto.php';
         include './model/lista.php';
+        include './control/controller.php';
+       
+        $c = new controller();
         
-        //$u = new usuario();
-        //print_r($u->recebeUsuario('a@a'));
-        //echo $u->validaUsuario('a@a', 'a');
-        //print_r($u->recebeUsuarioporcampo('nome', 'a'));
-        //print_r($u->recebeUsuarios());
+        $c->index();
         
-        //var_dump(conexao::getConexao());
+        if($c->cadastroIndex) echo $c->cadastroIndex;
+        if($c->loginIndex) echo $c->loginIndex;
         
-        //$p = new produto;
-        //print_r($p->recebeProdutos());
-        
-        $l = new lista();
-        //print_r($l->addLista('4b9411a9b28f9063ea75e5fee24bb2a8','lista de presentes'));
-        //echo $l->removeLista('teste@teste.com');
-        
-        //print_r($l->getLista('teste@teste.com'));
-        //echo $l->addItem('teste@teste.com', 1);
-        //echo $l->removeItem(25, 1);
-
-        //print_r($l->getItem(26));
-        print_r($l->getItensUsuario('a@a'));
-        
-        echo 'aqui';
-    
         ?>
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <title></title>
+  </head>
+  <body>
+     <form method="POST">
+                <h2><!-- comment -->
+                    <strong>Efetue o login</strong><!-- comment -->
+                </h2><!-- comment -->
+                <hr><!-- comment -->
+                <p><input type="email" name="email" placeholder="Digite seu email" required/></p><!-- comment -->
+                <p><input type="password" name="senha" placeholder="Digite sua senha" required/></p>
+                <label class ="checkbox"><!-- comment -->
+                    <input type="checkbox" name="lembrete"> Lembrar Senha</label>
+                <p><button name="login" type="submit">Entrar</button></p>               
+            </form>
+        </section>
+        
+        <section class="col-md-6">
+            <form method="POST">
+                <hr>
+                <h2>
+                    <strong> Cadastre-se agora</strong><!-- comment -->
+                </h2><!-- comment -->
+                <hr><!-- comment -->
+                <p><input type="email" name="email" placeholder="Digite seu email" required/></p><!-- comment -->
+                <p><input type="nome" name="nome" placeholder="Digite seu nome" required/></p>
+                <p><input type="password" name="senha" placeholder="Digite sua senha" required/></p>
+                <p><button name="cadastrar" type="submit">Cadastrar</button></p>
+             </form>
+        </section>
+            </div>
+        
+        <section class="row clearfix">
+            <hr><!-- comment -->
+            <h2><strong>Como criar sua própria lista</strong><!-- comment -->
+            </h2>
+            <hr><!-- comment -->
+            <div>
+            <div>
+                <img alt="tutorial_1" src="bootstrap/img/index/tutorial_1.jpg"><!-- comment -->
+            </div>
+            <div>
+                <p>
+                   Texto Explicativo 
+                </p><!-- comment -->
+            </div>
+            </div>
+            <hr>
+        </section>
+    </div>
     </body>
 </html>

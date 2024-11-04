@@ -24,13 +24,13 @@
   </head>
   <body>
      <form method="POST">
-                <h2><!-- comment -->
-                    <strong>Efetue o login</strong><!-- comment -->
-                </h2><!-- comment -->
-                <hr><!-- comment -->
-                <p><input type="email" name="email" placeholder="Digite seu email" required/></p><!-- comment -->
+                <h2>
+                    <strong>Efetue o login</strong>
+                </h2>
+                <hr>
+                <p><input type="email" name="email" placeholder="Digite seu email" required/></p>
                 <p><input type="password" name="senha" placeholder="Digite sua senha" required/></p>
-                <label class ="checkbox"><!-- comment -->
+                <label class ="checkbox">
                     <input type="checkbox" name="lembrete"> Lembrar Senha</label>
                 <p><button name="login" type="submit">Entrar</button></p>               
             </form>
@@ -40,10 +40,10 @@
             <form method="POST">
                 <hr>
                 <h2>
-                    <strong> Cadastre-se agora</strong><!-- comment -->
-                </h2><!-- comment -->
-                <hr><!-- comment -->
-                <p><input type="email" name="email" placeholder="Digite seu email" required/></p><!-- comment -->
+                    <strong> Cadastre-se agora</strong>
+                </h2>
+                <hr>
+                <p><input type="email" name="email" placeholder="Digite seu email" required/></p>
                 <p><input type="nome" name="nome" placeholder="Digite seu nome" required/></p>
                 <p><input type="password" name="senha" placeholder="Digite sua senha" required/></p>
                 <p><button name="cadastrar" type="submit">Cadastrar</button></p>
@@ -52,18 +52,18 @@
             </div>
         
         <section class="row clearfix">
-            <hr><!-- comment -->
-            <h2><strong>Como criar sua própria lista</strong><!-- comment -->
+            <hr>
+            <h2><strong>Como criar sua própria lista</strong>
             </h2>
-            <hr><!-- comment -->
+            <hr>
             <div>
             <div>
-                <img alt="tutorial_1" src="bootstrap/img/index/tutorial_1.jpg"><!-- comment -->
+                <img alt="tutorial_1" src="bootstrap/img/index/tutorial_1.jpg">
             </div>
             <div>
                 <p>
                    Texto Explicativo 
-                </p><!-- comment -->
+                </p>
             </div>
             </div>
             <hr>

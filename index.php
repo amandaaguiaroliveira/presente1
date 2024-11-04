@@ -23,7 +23,32 @@
       <title></title>
   </head>
   <body>
-     <form method="POST">
+  <div class="container">
+        <header class="row clearfix">
+            Logomarca
+        </header>
+        
+        <nav class="row clearfix">
+            Menu
+        </nav>
+        <div>
+            <hr>
+            <h2><strong>Produtos para sua lista</strong></h2>
+        </div>
+        <article class="row clearfix">
+            <img src="bootstrap/img/produtos/pc.jpg" alt="foto">
+            <h2>Titulo do produto</h2>
+            <p>Descrição do produto</p>
+            <p><a href="#">Link do produto</a></p>
+            <p></p>
+
+            <form method="POST">
+                <input type="hidden" name="codigo" value="|">
+                <button class="btn btn-default btn-lg" name="add">Adicionar a lista</button>
+            </form>
+        </article>
+        </div>
+    <!--  <form method="POST">
                 <h2>
                     <strong>Efetue o login</strong>
                 </h2>
@@ -68,6 +93,6 @@
             </div>
             <hr>
         </section>
-    </div>
+    </div> -->
     </body>
 </html>

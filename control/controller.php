@@ -4,6 +4,8 @@ class Controller{
     
     public $cadastroIndex = false;
     public $loginIndex = false;
+    public $listaProduto = false;
+    public $mensagemProduto = false;
   
   public function index(){
       if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -32,6 +34,19 @@ class Controller{
              }         
           }
       }
+  }
+
+  public function produtos(){
+
+    $p = new produto();
+    $this->listaProduto = $p->recebeProdutos();
+
+    if(isset($_POST['add'])){
+        $lista = new lista();
+
+        $this->mensagemProduto = $lista->addItem('test@teste.com',$_POST['codigo']);
+    }
+
   }
 }
 
